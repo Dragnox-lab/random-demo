@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe RANDOM Matcha Bar | Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #1a2f1a;
+            color: #f5f3f0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #2d4a2d 0%, #1a2f1a 100%);
+            color: #f5f3f0;
+            padding: 2rem 0;
+            position: relative;
+            border-bottom: 1px solid #3a5a3a;
+        }
+
+        .header-content {
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+            letter-spacing: 3px;
+            color: #d4b896;
+        }
+
+        .tagline {
+            font-size: 1rem;
+            color: #c4b29a;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(29, 47, 29, 0.95);
+            padding: 1rem 0;
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #3a5a3a;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            list-style: none;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-links a {
+            color: #f5f3f0;
+            text-decoration: none;
+            padding: 0.5rem 0;
+            font-weight: 300;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #d4b896;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: #d4b896;
+        }
+
+        .nav-links a.active {
+            color: #d4b896;
+        }
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        /* Minimal Menu Gallery */
+        .menu-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 0;
+        }
+        
+        .gallery-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #d4b896;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+        
+        .horizontal-gallery {
+            display: flex;
+            overflow-x: auto;
+            gap: 1.5rem;
+            padding: 1rem;
+            max-width: 100%;
+            scrollbar-width: thin;
+            scrollbar-color: #d4b896 #1a2f1a;
+        }
+        
+        .horizontal-gallery::-webkit-scrollbar {
+            height: 8px;
+        }
+        
+        .horizontal-gallery::-webkit-scrollbar-track {
+            background: #1a2f1a;
+        }
+        
+        .horizontal-gallery::-webkit-scrollbar-thumb {
+            background: #d4b896;
+            border-radius: 4px;
+        }
+        
+        .menu-item {
+            flex: 0 0 auto;
+            width: 300px;
+            height: 400px;
+            overflow: hidden;
+            border: 1px solid #3a5a3a;
+        }
+        
+        .menu-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(10, 26, 10, 0.9);
+            color: #f5f3f0;
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid #3a5a3a;
+        }
+
+        .copyright {
+            padding-top: 1rem;
+            color: #8a7a6a;
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1 class="logo">RANDOM</h1>
+            <p class="tagline">MATCHA BAR</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="index.html#about">ABOUT</a></li>
+            <li><a href="index.html#menu">SIGNATURE MENU</a></li>
+            <li><a href="menu.html" class="active">MENU</a></li>
+            <li><a href="index.html#interior">INTERIOR</a></li>
+            <li><a href="index.html#location">LOCATION</a></li>
+        </ul>
+    </nav>
+
+    <main class="menu-container">
+        <h2 class="gallery-title">OUR MENU COLLECTION</h2>
+        
+        <div class="horizontal-gallery">
+            <div class="menu-item">
+                <img src="menu1.png" alt="Menu Page 1">
+            </div>
+            <div class="menu-item">
+                <img src="menu2.png" alt="Menu Page 2">
+            </div>
+            <div class="menu-item">
+                <img src="menu3.png" alt="Menu Page 3">
+            </div>
+            <div class="menu-item">
+                <img src="menu4.png" alt="Menu Page 4">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2025 RANDOM MATCHA BAR. ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+</body>
+</html>
